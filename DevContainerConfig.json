@@ -1,0 +1,24 @@
+{
+    "name": "Lua Aided Design Container",
+    "image": "myregistry/myDevContainer:latest",
+
+    "remoteUser": "developer",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "twxs.cmake",
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    },
+
+    "containerEnv": {
+        "DEBIAN_FRONTEND": "noninteractive"
+    },
+
+    "forwardPorts": [22],
+
+    "postCreateCommand": "git config --global --add safe.directory /workspaces/Lua_Aided_Design"
+}
